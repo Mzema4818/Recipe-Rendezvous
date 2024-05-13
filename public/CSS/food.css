@@ -1,0 +1,66 @@
+.col-4 img{
+    width: 100%;
+    height: 300px;
+}
+
+.col-4 a{
+    color: black;
+    text-decoration: none;
+}
+
+.image-container {
+    position: relative;
+  }
+  
+.bigMeal img {
+    width: 100%;
+    height: 350px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 75px;
+    left: 50px;
+    font-size: 36px;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.randomMeal{
+    text-align: center;
+}
+
+.randomMeal img{
+    width: 85%;
+    height: 600px;
+}
+
+.randomMeal p{
+    font-size: 35px;
+    background-color: #DAA520;
+    width: 85%;
+    display: inline-block;
+    margin: auto; 
+}
+
+.randomMeal a{
+    color: black;
+}
+
+.box {
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+  }
+  
+  .box:nth-of-type(even) {
+    transform: translateX(-400%);
+  }
+  
+  .box.show {
+    transform: translateX(0);
+  }
+  

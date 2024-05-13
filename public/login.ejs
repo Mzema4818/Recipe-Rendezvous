@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="CSS/login.css">
+    </head> 
+    <body>
+        <div class="background" id="background"></div>
+
+        <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+              <%# Right side navbar %>
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/"><span class="fas fa-arrow-left"></span> Back to site</a></li> 
+              </ul>
+            </div>
+        </nav>
+        <hr> 
+
+        <div class="container" style="text-align: center;">
+            <h1>Recipe Rendezvous</h1>
+            <h2>Log in</h2>
+            <form id="login" action="/login" method="POST">
+                <label for="username">Username:</label><br>
+                <input type="text" name="username" id = "username" autocomplete="off" placeholder="Username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" id = "password" autocomplete="off" placeholder="Password"><br>
+                <input type="submit" value="Submit Form">
+            </form>
+            <p class="text">Don't have an account? <a href="register">Register</a> </p>
+        </div>
+
+        
+        <script>
+            const form = document.getElementById("login")
+            form.addEventListener("submit", Login)
+
+            async function Login(event){
+                event.preventDefault()
+                const username = document.getElementById("username").value
+                const password = document.getElementById("password").value
+
+                const result = await fetch("/api/login", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': "application/json"
+                    },
+                    body: JSON.stringify({
+                        username,
+                        password
+                    })
+                }).then(res => res.json())
+
+                if(result.status === 'ok'){
+                    window.location.href = "/";
+                }else{
+                    alert(result.error)
+                }
+            }
+        
+       </script>
+    </body>
+</html>
+
+<script src="JavaScript/stuff.js"></script>

@@ -1,0 +1,89 @@
+img{
+    width: 200px;
+    height: 200px;
+}
+
+h1{
+    text-align: center;
+}
+
+.container{
+    text-align: center;
+}
+
+.number{
+    background-color: #DAA520;
+    padding: 15px;
+    font-size: 36px;
+}
+
+#mySearch {
+    width: 100%;
+    font-size: 18px;
+    padding: 11px;
+    border: 1px solid #ddd;
+}
+  
+#myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fa-plus{
+    background-color: #DAA520;
+    color: black;
+    font-size: 30px;
+    padding: 5px;
+}
+
+#add{
+    font-size: 25px;
+    text-decoration: none;
+    color: black
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.centered1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.centered2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.container img:hover {
+    filter: grayscale(50%);
+}
+
+.container img:hover ~ .centered1,
+.container img:hover ~ .centered2 ,
+#myMenu li a:hover ~ .centered1,
+#myMenu li a:hover ~ .centered2{
+  display: block;
+}
+
+#myMenu li a{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    width: 50px;
+    height: 30px;
+    font-weight: bold;
+}
+
+#myMenu li a:hover{
+    cursor: none;
+}

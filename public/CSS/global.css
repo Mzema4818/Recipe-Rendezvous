@@ -1,0 +1,32 @@
+.nav-link{
+    color: black;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+}
+
+body{
+    background-color: #f5f5dcbf;
+    font-family:Cambria,'Times New Roman','Nimbus Roman No9 L','Freeserif',Times,serif;
+}
+.navbar-nav {
+    margin: auto; /* Horizontally center navbar items */
+    font-size: 25px;
+}
+
+.leftSide{
+    font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
+}
+
+#endCard{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 400px;
+}
+
+#endCard a{
+    color: white;
+    text-decoration: none;
+}

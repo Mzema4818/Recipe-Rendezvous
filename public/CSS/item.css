@@ -1,0 +1,24 @@
+.container img{
+    width: 75%;
+    height: 600px;
+}
+
+.container h1{
+    font-weight: bold;
+}
+
+#num{
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+#step{
+    font-size: 18px;
+    margin-top: -25px;
+}
+
+#directions{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
